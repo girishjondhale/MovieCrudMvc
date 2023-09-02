@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using(Html.BeginForm())
+{
+<p>
+    <label>Enter name</label>
+    @Html.TextBox("username")
+</p>
+<p>
+        <label>Enter name</label>
+        @Html.RadioButton("gender","male","male")Male
+        @Html.RadioButton("gender","female","female")Female
+
+</p>
+<p>
+    <label>select hobbies</label>
+    <input type="checkbox"name="hobbies",value="sports"/>sports
+        <input type="checkbox" name="hobbies" ,value="music" />music
+</p>
+<p>
+    <label>Select City</label>
+    @Html.DropDownList("cities")
+</p>
+    <p>
+        <label>select city</label>
+        @Html.ListBox("list")
+    </p>
+    <p>
+        <label>Your comments</label>
+        @Html.TextArea("comments")
+    </p>
+    <p>
+        <input type="submit" value="Save" />
+    </p>
+
+
+
+}
